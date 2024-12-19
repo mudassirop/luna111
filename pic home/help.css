@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #dfe7dd;
+    color: #000000;
+    padding: 10px 0;
+    height: 56px;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    margin: 18px 0; /* Remove fixed margin */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #efc14c;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.faq {
+    margin-bottom: 20px;
+}
+
+.faq h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.faq p {
+    font-size: 14px;
+    color: #666;
+}
+
+footer {
+    background-color: #dfe7dd;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack nav items vertically */
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
+
+    nav ul li {
+        margin-right: 0; /* Remove right margin for stacked items */
+        margin-bottom: 10px; /* Add space between items */
+    }
+
+    .container {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .faq h3 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .faq p {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px; /* Further reduce font size for mobile */
+    }
+
+    .container {
+        margin: 10px; /* Reduce margin for mobile */
+    }
+}

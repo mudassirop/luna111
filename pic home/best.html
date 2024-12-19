@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna Volt - Shopping Page</title>
+    <link rel="stylesheet" href="best.css">
+    <!-- <style>
+        /* Add some basic styles for the search input and button */
+        .search {
+            display: flex;
+            align-items: center;
+        }
+        .home-textinput {
+            padding: 8px;
+            margin-right: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .product {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+    </style> -->
+</head>
+<body>
+    <header class="home-header">
+        <div class="home-navbar">
+            <div class="logo">Luna Volt</div>
+            <div class="search">
+                <input type="text" id="searchInput" class="home-textinput" placeholder="Search products..." />
+                <button class="button" id="searchButton">Search</button>
+            </div>
+            <nav>
+                <a href="index.html" class="navbar-link">Home</a>
+                <!-- <a href="#cart" class="navbar-link">Cart (0)</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <main class="home-main">
+        <div class="home-hero">
+            <h1 class="home-text26">Welcome to Luna Volt</h1>
+            <p class="home-text27">Your one-stop shop for electronic components</p>
+        </div>
+
+        <div class="section-container">
+            <h2 class="section-heading-text1">Shop by Category</h2>
+            <div class="products" id="productList">
+                <article class="product">
+                    <img src="arduino.png" alt="Arduino" class="category-card-image" />
+                    <h3 class="category-card-text">Arduino</h3>
+                    <span class="item-card-price">350₹</span>
+                    <button class="button add-to-cart" data-name="Arduino" data-price="350">Order via Telegram</button>
+                </article>
+                <article class="product">
+                    <img src="https://harishprojects.com/cdn/shop/files/2-Cells-18650-Battery-Holder-Buy-5-Get-2-Switch-Button-Free-512x512-1.webp?v=1718122323&width=360" alt="Power Supply" class="category-card-image" />
+                    <h3 class="category-card-text">2 Cells 18650 Battery Holder</h3>
+                    <span class="item-card-price">50₹</span>
+                    <button class="button add-to-cart" data-name="2 Cells 18650 Battery Holder" data-price="50">Order via Telegram</button>
+                </article>
+                <article class="product">
+                    <img src="relay module.png" alt="Relay Module" class="category-card-image" />
+                    <h3 class="category-card-text">Relay Module</h3>
+                    <span class="item-card-price">100₹</span>
+                    <button class="button add-to-cart" data-name="Relay Module" data-price="100">Order via Telegram</button>
+                </article>
+                <article class="product">
+                    <img src="https://harishprojects.com/cdn/shop/files/Joystick-Module-Dual-Axis-XY-for-Arduino-High-Quality-Robotics-Arm-Game-Joystick-j.webp?v=1720427209&width=1100" alt="Raspberry Pi" class="category-card-image" />
+                    <h3 class="category-card-text">Arduino High Quality / Robotics Arm / Game Joystick</h3>
+                    <span class="item-card-price">90₹</span>
+                    <button class="button add-to-cart" data-name="Game Joystick" data-price="90">Order via Telegram</button>
+                </article>
+                <article class="product">
+                    <img src="mositure identifier.png" alt="Moisture Identifier" class="category-card-image" />
+                    <h3 class="category-card-text">Moisture Identifier</h3>
+                    <span class="item-card-price">80₹</span>
+                    <button class="button add-to-cart" data-name="Moisture Identifier" data-price="80">Order via Telegram</button>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer id="about" class="home-footer1">
+        <div class="max-width-container">
+            <div class="home-footer2">
+                <div class="home-container 19">
+                    <h3 class="home-text42 Heading-3">Luna Volt</h3>
+                    <span class="home-text43">Maharashtra, Thane, Mumbra, India</span>
+                    <span class="home-text46">8976276245</span>
+                </div>
+                <div class="home-links-container">
+                    <div class="home-container20">
+                        <span class="home-text48">Categories</span>
+                        <span class="home-text49">Collections</span>
+                        <span class="home-text50">Modules</span>
+                        <span class="home-text51">LEDs</span>
+                        <span class="home-text52">Lamps</span>
+                        <span class="home-text53">Relays</span>
+                        <span class="home-text54">Electronic</span>
+                    </div>
+                    <div class="home-container21">
+                        <span class="home-text55">Company</span>
+                        <span class="home-text56">Shop</span>
+                        <span class="home-text57">Lookbook</span>
+                        <span class="home-text58">Specials</span>
+                        <span class="home-text59">About</span>
+                        <span class="home-text60">Blog</span>
+                    </div>
+                    <div class="home-container22">
+                        <span class="home-text61">Resources</span>
+                        <span class="home-text62">Contact us</span>
+                        <span class="home-text63">Order</span>
+                        <span class="home-text64">Track your order</span>
+                        <span class="home-text65">Shipping & Delivery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const productName = button.getAttribute('data-name');
+                const productPrice = button.getAttribute('data-price');
+
+                // Create Telegram link with pre-filled message
+                const message = `I would like to order ${productName} for ₹${productPrice}.`;
+                
+                // Use the phone number in international format (e.g., +19876276245)
+                const telegramLink = `https://t.me/+${encodeURIComponent('8976276245')}?text=${encodeURIComponent(message)}`;
+
+                // Open Telegram link in a new tab
+                window.open(telegramLink, '_blank');
+
+                // Alert user
+                alert('Please check your Telegram to send your order.');
+            });
+        });
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+
+            // Filter products
+            products.forEach(product => {
+                const productName = product.querySelector('.category-card-text').textContent.toLowerCase();
+                if (productName.includes(query)) {
+                    product.style.display = ''; 
+                } else {
+                    product.style.display = 'none'; 
+                }
+            });
+        });
+    </script>
+</body>
+</html>
